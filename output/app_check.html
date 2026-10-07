@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs — App checks</title>
+  <style>
+    body{margin:0;background:#f5f1e9;color:#15263b;font:16px/1.55 Arial,sans-serif}main{max-width:1100px;margin:0 auto;padding:48px 28px 80px}h1{font:600 46px Georgia,serif;color:#00356b;margin:0 0 12px}h2{font:600 28px Georgia,serif;color:#00356b;margin:48px 0 8px}p{max-width:760px;color:#536070}.check{padding-top:8px;border-top:3px solid #c99a45;margin-top:38px}figure{margin:20px 0 0;background:#fff;padding:14px;box-shadow:0 8px 25px #00356b1c}img{display:block;width:100%;height:auto}figcaption{padding:14px 4px 3px;color:#536070;font-size:14px}code{color:#00356b}
+  </style>
+</head>
+<body><main>
+  <h1>Campus Customs live app checks</h1>
+  <p>These screenshots were captured from the running Vite site and FastAPI backend. Each check records a visible behavior and its evidence.</p>
+
+  <section class="check">
+    <h2>1. Chat checks inventory and price</h2>
+    <p>The shopper asks for the 2025 Yale vs Harvard T-shirt and size M stock. The chat response shows the database-backed price and quantity rather than an invented value.</p>
+    <figure><img src="app_check_images/inventory.png" alt="Campus Customs chat showing the price and size M inventory for the Yale versus Harvard T-shirt"><figcaption>Evidence: the chat displays the submitted question and the agent’s exact product price and size-specific stock result.</figcaption></figure>
+  </section>
+
+  <section class="check">
+    <h2>2. Category question creates product cards</h2>
+    <p>The shopper asks what hoodies are available. The structured product matches returned by the agent appear on the page with images, names, prices, and short descriptions.</p>
+    <figure><img src="app_check_images/hoodies.png" alt="Campus Customs page showing hoodie product cards returned by chat"><figcaption>Evidence: the “Picked for your question” section contains dynamically loaded hoodie cards. Each card links to the existing single-item detail route.</figcaption></figure>
+  </section>
+
+  <section class="check">
+    <h2>3. Seasonal collection filter</h2>
+    <p>The Products page categorizes catalogue items into Spring / Summer and Autumn / Winter, with a filter that narrows the visible collection without leaving the page.</p>
+    <figure><img src="app_check_images/season-filter.png" alt="Campus Customs products page filtered to the Autumn and Winter collection"><figcaption>Evidence: the Autumn / Winter filter is selected and the product cards are labeled with their collection category.</figcaption></figure>
+  </section>
+</main></body>
+</html>
